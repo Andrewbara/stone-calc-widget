@@ -1,0 +1,184 @@
+/* ========== 📄 Результаты расчёта ========== */
+
+.result-wrapper {
+    padding: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+  }
+  
+  .result-wrapper h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #dc2626;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* ===== Кнопка получения расчёта ===== */
+  .get-result-button {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    transition: background 0.2s ease;
+  }
+  
+  .get-result-button:hover {
+    background: #1e40af;
+  }
+  
+  /* ===== Таблица итогов (материал) ===== */
+  .result-material-table {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .result-material-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .result-material-table .font-medium {
+    font-weight: 600;
+  }
+  
+  .result-material-table img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  /* ===== Таблица расчёта ===== */
+  .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+  
+  .result-table th,
+  .result-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+  }
+  
+  .result-table th {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+  
+  .result-table tr:hover {
+    background: #f9fafb;
+  }
+  
+  /* ===== Итог ===== */
+  .result-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: right;
+    color: #dc2626;
+    margin-bottom: 0.25rem;
+  }
+  
+  .result-note {
+    font-size: 0.875rem;
+    text-align: right;
+    color: #666;
+  }
+  
+  /* ===== Модалка ===== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modal-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content input,
+  .modal-content select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  
+  .modal-buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  
+  .modal-buttons .cancel-btn {
+    background: #f3f4f6;
+    color: #333;
+  }
+  
+  .modal-buttons .send-btn {
+    background: #dc2626;
+    color: white;
+  }
+  
+  .modal-buttons .send-btn:hover {
+    background: #b91c1c;
+  }
+  
+  /* ===== 📱 Мобила адаптив ===== */
+  @media (max-width: 640px) {
+    .result-wrapper {
+      padding: 1rem;
+    }
+  
+    .result-table th,
+    .result-table td,
+    .result-material-table td {
+      padding: 0.5rem;
+    }
+  
+    .result-total {
+      font-size: 1.125rem;
+    }
+  
+    .modal-content {
+      padding: 1rem;
+    }
+  
+    .modal-content h3 {
+      font-size: 1rem;
+    }
+  }
+  

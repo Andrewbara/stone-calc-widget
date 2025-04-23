@@ -1,0 +1,171 @@
+:root {
+  --fontSize: 14px;
+  --lightText: #fff;
+  --darkText: #060607;
+  --focusRing: rgba(0, 149, 255, 0.35);
+  --currentColor: var(--darkText);
+  --currentContrast: var(--lightText);
+  --linkOpacity: 0.8;
+  --transitionDuration: 0.3s;
+  --transitionTiming: ease;
+}
+
+/* 🔹 Скрытие скроллбара */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 🔷 Бренды */
+.brand-carousel-wrapper {
+  padding-bottom: 1rem;
+  overflow-x: auto;
+}
+.brand-carousel {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  overflow-x: auto;
+  align-items: center;
+}
+.brand-logo {
+  height: 40px;
+  padding: 4px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+.brand-logo.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔷 Фильтры */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+.filters-container select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.875rem;
+}
+
+/* 🔷 Сетка материалов */
+.materials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* 🔷 Карточки */
+.material-card-overlay {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-card-overlay.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+  transform: scale(1.02);
+}
+
+/* 🔷 Изображение */
+.material-overlay-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🔷 Поверх контента */
+.material-overlay-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #d62828;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.material-line {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.material-line.price {
+  align-self: flex-start;
+}
+
+.material-line.code {
+  align-self: flex-end;
+}
+
+.material-checkbox-icon {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 640px) {
+  .brand-logo {
+    height: 32px;
+  }
+
+  .material-card-overlay {
+    width: 80px;
+    height: 80px;
+  }
+
+  .material-overlay-content {
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .material-line {
+    padding: 1px 3px;
+  }
+
+  .material-checkbox-icon {
+    height: 18px;
+    width: 18px;
+    font-size: 11px;
+  }
+}

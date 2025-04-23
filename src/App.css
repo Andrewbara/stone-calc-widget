@@ -1,0 +1,41 @@
+/* Обертка приложения */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+}
+
+/* Центрирование iframe и контейнера */
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 1rem;
+  background: #f3f4f6; /* Светло-серый фон */
+}
+
+.iframe-content {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Мобильный вид */
+@media (max-width: 768px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .iframe-content {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

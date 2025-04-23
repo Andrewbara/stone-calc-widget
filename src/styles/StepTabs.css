@@ -1,0 +1,38 @@
+.step-tabs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .step-tab {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    background: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .step-tab:hover {
+    color: #dc2626;
+  }
+  
+  .step-tab.active {
+    border-color: #dc2626;
+    color: #dc2626;
+    font-weight: 600;
+    background: #fff0f0;
+  }
+  
+  @media (max-width: 640px) {
+    .step-tab {
+      flex: 1 1 45%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  

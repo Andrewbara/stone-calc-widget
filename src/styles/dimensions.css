@@ -1,0 +1,370 @@
+.shape-display-panel {
+  width: 100%;
+  max-width: 720px;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.shape-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.9);
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+.shape-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shape-selector-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.shape-selector-panel button {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.shape-selector-panel button img {
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  width: 100%;
+}
+
+.shape-selector-panel button .text {
+  padding: 4px;
+  font-size: 13px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.raduisWrapper,
+.sizWrapper {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.raduisWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.raduisWrapper input[type="checkbox"] {
+  z-index: 10;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.raduisWrapper .ugol {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1;
+}
+
+.sizWrapper {
+  background: #fff;
+  padding: 7px;
+}
+
+.input-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transform: translate(-50%, -50%);
+}
+
+.dimension-input,
+.size {
+  width: 60px;
+  padding: 4px 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  appearance: textfield;
+}
+
+.dimension-input::-webkit-inner-spin-button,
+.dimension-input::-webkit-outer-spin-button,
+.size::-webkit-inner-spin-button,
+.size::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dimension-label {
+  font-size: 12px;
+  color: #444;
+}
+
+.shape-thumbnail {
+  transform: scale(1);
+  transform-origin: top left;
+}
+
+/* === Прямая (новые координаты) === */
+.variant[data-type="priamaya"] .raduisWrapper.r0 {
+  left: 15.5%;
+  top: 32%;
+}
+.variant[data-type="priamaya"] .raduisWrapper.r1 {
+  left: 89.8%;
+  top: 32%;
+}
+.variant[data-type="priamaya"] .raduisWrapper.r2 {
+  left: 89.8%;
+  top: 80.7%;
+}
+.variant[data-type="priamaya"] .raduisWrapper.r3 {
+  left: 15.5%;
+  top: 80.9%;
+}
+.variant[data-type="priamaya"] .raduisWrapper.r4,
+.variant[data-type="priamaya"] .raduisWrapper.r5 {
+  left: 86%;
+  top: 76%;
+}
+
+.variant[data-type="priamaya"] .sizWrapper.s0 {
+  left: 53%;
+  top: 10%;
+}
+.variant[data-type="priamaya"] .sizWrapper.s1 {
+  left: 9%;
+  top: 53%;
+}
+
+/* === Г-образная === */
+.variant[data-type="gobraz"] .raduisWrapper.r3 {
+  left: 40.3%;
+  top: 80.6%;
+}
+.variant[data-type="gobraz"] .raduisWrapper.r1 {
+  left: 82.7%;
+  top: 50.5%;
+}
+.variant[data-type="gobraz"] .raduisWrapper.r2 {
+  left: 15.5%;
+  top: 80.7%;
+}
+.variant[data-type="gobraz"] .raduisWrapper.r0 {
+  left: 46%;
+  top: 57%;
+}
+
+.variant[data-type="gobraz"] .sizWrapper.s0 {
+  left: 50%;
+  top: 7%;
+}
+.variant[data-type="gobraz"] .sizWrapper.s1 {
+  left: 98%;
+  top: 35%;
+}
+.variant[data-type="gobraz"] .sizWrapper.s2 {
+  left: 27%;
+  top: 93%;
+}
+
+/* === П-образная (новые координаты) === */
+.variant[data-type="pobraz"] .raduisWrapper.r0 {
+  left: 42.8%;
+  top: 56.2%;
+}
+.variant[data-type="pobraz"] .raduisWrapper.r1 {
+  left: 56.1%;
+  top: 56.4%;
+}
+.variant[data-type="pobraz"] .raduisWrapper.r2 {
+  left: 15.3%;
+  top: 76.7%;
+}
+.variant[data-type="pobraz"] .raduisWrapper.r3 {
+  left: 35.5%;
+  top: 77.5%;
+}
+.variant[data-type="pobraz"] .raduisWrapper.r4 {
+  left: 61.7%;
+  top: 77.9%;
+}
+.variant[data-type="pobraz"] .raduisWrapper.r5 {
+  left: 83.3%;
+  top: 77.9%;
+}
+
+.variant[data-type="pobraz"] .sizWrapper.s0 {
+  left: 50%;
+  top: 6%;
+}
+.variant[data-type="pobraz"] .sizWrapper.s1 {
+  left: 93%;
+  top: 50%;
+}
+.variant[data-type="pobraz"] .sizWrapper.s2 {
+  left: 73%;
+  top: 93%;
+}
+.variant[data-type="pobraz"] .sizWrapper.s3 {
+  left: 50%;
+  top: 35%;
+}
+.variant[data-type="pobraz"] .sizWrapper.s4 {
+  left: 25%;
+  top: 93%;
+}
+.variant[data-type="pobraz"] .sizWrapper.s5 {
+  left: 2%;
+  top: 50%;
+}
+
+/* === Радиальная === */
+.variant[data-type="fartuk"] .sizWrapper.s0 {
+  left: 50%;
+  top: 5%;
+}
+.variant[data-type="fartuk"] .sizWrapper.s1 {
+  left: 5%;
+  top: 75%;
+}
+
+/* === Адаптив под мобилки === */
+@media (max-width: 768px) {
+
+  .raduisWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .raduisWrapper .ugol {
+    width: 36.5px;
+    height: 80px;
+  }
+
+  .dimension-input,
+  .size {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .shape-selector-panel {
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    max-width:none;
+    gap:8px
+  }
+  .shape-selector-panel button img {
+    height:56px
+  }
+  .shape-display-panel {
+    padding:.75rem
+  }
+}
+/* Смарт-выравнивание чекбокса по направлению */
+
+/* === Прямая === */
+.variant[data-type="priamaya"] .r0 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.variant[data-type="priamaya"] .r1 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.variant[data-type="priamaya"] .r2 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.variant[data-type="priamaya"] .r3 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.variant[data-type="priamaya"] .r4 input[type="checkbox"],
+.variant[data-type="priamaya"] .r5 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* === Г-образная === */
+.variant[data-type="gobraz"] .r0 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.variant[data-type="gobraz"] .r1 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.variant[data-type="gobraz"] .r2 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.variant[data-type="gobraz"] .r3 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* === П-образная === */
+.variant[data-type="pobraz"] .r0 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.variant[data-type="pobraz"] .r1 input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.variant[data-type="pobraz"] .r2 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.variant[data-type="pobraz"] .r3 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.variant[data-type="pobraz"] .r4 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.variant[data-type="pobraz"] .r5 input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

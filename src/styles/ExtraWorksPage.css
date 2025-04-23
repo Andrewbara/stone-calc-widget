@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .extra-work-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .extra-work-block label {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    .extra-work-block .qty-row {
+      justify-content: flex-start;
+    }
+  }
+  

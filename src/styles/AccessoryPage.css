@@ -1,0 +1,85 @@
+.accessory-section {
+  margin-bottom: 2rem;
+}
+
+.accessory-section h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.accessory-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.accessory-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.accessory-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.accessory-card.selected {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px #dc2626;
+  transform: scale(1.02);
+}
+
+.accessory-card img {
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.accessory-card .title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.accessory-card .price {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 640px) {
+  .accessory-list {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .accessory-card {
+    width: 140px;
+    padding: 0.75rem;
+  }
+
+  .accessory-card img {
+    height: 70px;
+  }
+
+  .accessory-card .title {
+    font-size: 0.85rem;
+  }
+
+  .accessory-card .price {
+    font-size: 0.75rem;
+  }
+}
